@@ -17,7 +17,8 @@ export const Home = () => {
 			<br />
 			<h1>Contact</h1>
 			{store.contacts.map((contacto) => {
-				return <CardContact name={contacto.name} id={contacto.id} phone={contacto.phone} email={contacto.email} address={contacto.address} />
+
+				return <CardContact name={contacto.name} id={contacto.id} phone={contacto.phone} email={contacto.email} address={contacto.address} contacto={contacto} />
 			})}
 
 		</div>

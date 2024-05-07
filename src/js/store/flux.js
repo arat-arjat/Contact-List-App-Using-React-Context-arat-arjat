@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			contacts: [],
+			currentDetail: { name: "example" }
 
 		},
 		actions: {
@@ -61,6 +62,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				// url https://playground.4geeks.com/contact/agendas/aratarjat/contacts
 			},
+
+			currentContactEdit: (c) => {
+				let store = getStore()
+				setStore({ ...store, currentDetail: c })
+			}
 
 			// https://playground.4geeks.com/contact/agendas/aratarjat
 		}
